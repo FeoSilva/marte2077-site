@@ -1,4 +1,4 @@
-# Marte 2077
+# Marte 2077 - Site
 
 Esse repositório contém todos os arquivos da landing page do jogo Marte2077.
 
