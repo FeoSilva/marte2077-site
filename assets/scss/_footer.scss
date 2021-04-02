@@ -1,0 +1,134 @@
+
+
+
+/*===========================
+    14.FOOTER css 
+===========================*/
+
+
+
+
+.footer-area{
+	.footer-list{
+		@media #{$lg} {
+			padding-left: 0;
+		}
+		@media #{$md} {
+			padding-left: 0;
+		}
+		@media #{$xs} {
+			padding-left: 0;
+		}
+		& .title{
+			font-size: 18px;
+			font-weight: 600;
+			padding-bottom: 34px;
+		}
+		& ul{
+			& li{
+				& a{
+					font-size: 16px;
+					line-height: 32px;
+					color: $text-color;
+					@include transition(0.3s);
+					&:hover{
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+	& .footer-follow{
+		& ul{
+			& li{
+				display: inline-block;
+				& a{
+					height: 40px;
+					width: 40px;
+					text-align: center;
+					line-height: 40px;
+					border-radius: 50%;
+					background: #dedbeb;
+					color: $white;
+					@include transition(0.3s);
+					margin-right: 4px;
+					 &:hover{
+					 	background: $theme-color;
+					 }
+				}
+			}
+		}
+	}
+
+}
+
+
+.footer-copyright{
+	margin-top: 90px;
+	& .footer-copyright-item{
+		border-top: 1px solid #dedbeb;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 45px 0;
+		@media #{$xs} {
+			display: block;
+			text-align: center;
+		}
+		& p{
+			font-weight: 500;
+			@media #{$xs} {
+				padding-bottom: 15px;
+			}
+		}
+		& ul{
+			& li{
+				display: inline-block;
+				& a{
+					font-weight: 500;
+					color: $text-color;
+					margin-left: 16px;
+					@include transition(0.3s);
+					&:hover{
+						color: $theme-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/*==== BACK TO TOP ====*/
+
+.back-to-top {
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: $theme-color;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    border-radius: 0px;
+    @include transition(0.3s);
+    cursor: pointer;
+    box-shadow: 0 6px 14px 0 rgba(0, 0, 0, 0.09);
+
+    & i {
+        color: $white;
+    }
+
+    &:hover {
+        background-color: $theme-color;
+    }
+}
+
+

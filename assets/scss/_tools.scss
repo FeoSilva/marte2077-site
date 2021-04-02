@@ -1,0 +1,122 @@
+
+
+
+/*===========================
+    8.TOOLS css 
+===========================*/
+
+
+
+
+
+.tools-area{
+	padding-bottom: 120px;
+	overflow: hidden;
+
+}
+
+
+.tools-content{
+	& span{
+		font-size: 20px;
+		color: $theme-color;
+		text-transform: capitalize;
+	}
+	& .title{
+		font-size: 60px;
+		font-weight: 400;
+		padding-top: 5px;
+		@media #{$lg} {
+			font-size: 50px;
+
+		}
+		@media #{$xs} {
+			font-size: 36px;		
+		}
+	}
+	& p{
+		font-size: 24px;
+		line-height: 40px;
+		color: $theme-color;
+		padding-top: 35px;
+		padding-bottom: 44px;
+		@media #{$xs} {
+			font-size: 17px;
+		}
+		@media #{$sm} {
+			font-size: 20px;
+		}
+	}
+	& ul{
+		padding-bottom: 50px;
+		& li{
+			font-size: 20px;
+			line-height: 44px;
+
+			@media #{$lg} {
+				font-size: 18px;
+			}
+			@media #{$xs} {
+				font-size: 16px;
+				line-height: 28px;
+				padding-bottom: 20px;
+			}
+			& i{
+				padding-right: 17px;
+				color: $theme-color;
+			}
+		}
+	}
+}
+
+
+.tools-thumbs{
+	position: relative;
+	z-index: 10;
+	text-align: right;
+	@media #{$md} {
+		text-align: left;
+	}
+	@media #{$xs} {
+		text-align: left;
+	}
+	&::before{
+		position: absolute;
+		content: '';
+		right: -13px;
+		top: 8px; 
+		height: 560px;
+		width: 560px;
+		border-radius: 50%;
+		background: $theme-color;
+		z-index: -1;
+		@media #{$lg} {
+			width: 460px;
+			height: 460px;
+		}
+		@media #{$md} {
+			right: auto;
+			left: 0;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+	}
+	& > img{
+		margin-right: -23px;
+		padding-top: 103px;
+		@media #{$md} {
+			margin-right: 0;
+		}
+		@media #{$xs} {
+			margin-right: 0;
+		}
+	}
+	& .tool-line{
+		position: absolute;
+		right: -115px;
+		top: 40px;
+		z-index: -2;
+		@include animation(bubbleMover2 linear infinite 12s);
+	}
+}

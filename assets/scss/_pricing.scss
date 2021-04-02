@@ -1,0 +1,229 @@
+
+
+
+/*===========================
+    5.PRICING css 
+===========================*/
+
+
+
+
+
+
+
+
+
+
+.pricing-area{
+	position: relative;
+	z-index: 10;
+	& .pricing-shape{
+		position: absolute;
+		right: 0;
+		top: -520px;
+		z-index: -1;
+		text-align: right;
+		@media #{$laptop} {
+			width: 30%;
+			top: -250px;
+		}
+		@media #{$lg} {
+			width: 40%;
+			top: -200px;
+		}
+	}
+	& .switch-toggler-list{
+		margin-top: 43px;
+	}
+	& .switch{
+	    position: relative;
+	    display: inline-block;
+	    width: 80px;
+	    height: 36px;
+	    vertical-align: middle;
+	    margin: 0;
+	    & input{
+	    	display: none;
+	    }
+	    &.off{
+	    	& .slider{
+	    		&::before{
+				    -webkit-transform: translateX(47px);
+				    transform: translateX(47px);
+
+	    		}
+	    	}
+	    }
+
+	}
+	& .slider{
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		-webkit-transition: .4s;
+		transition: .4s;
+		background: $theme-color;
+		&::before{
+		    position: absolute;
+		    content: "";
+		    height: 26px;
+		    width: 26px;
+		    left: 2px;
+		    bottom: 5px;
+		    -webkit-transform: translateX(3px);
+		    transform: translateX(3px);
+		    background-color: #fff;
+		    -webkit-transition: .4s;
+		    transition: .4s;
+		}
+		&.round{
+			border-radius: 34px;
+			&::before{
+				border-radius: 50%;
+			}
+		}
+
+	}
+	& ul{
+		&.switch-toggler-list{
+		    display: -webkit-box;
+		    display: flex;
+		    -webkit-box-align: center;
+		    align-items: center;
+		    -webkit-box-pack: center;
+		    justify-content: center;
+		    margin-bottom: 28px;
+		    & li{
+		    	& a{
+				    font-weight: 500;
+				    padding-left: 20px;
+				    padding-right: 20px;
+				    display: block;
+				    color: #716a90;
+				    font-size: 18px;
+
+		    	}
+		    	&.active{
+		    		& a{
+		    			color: $heading-color;
+		    		}
+		    	}
+		    }
+
+		}
+	}
+}
+	
+
+
+
+
+
+
+.pricing-item{
+	border: 1px solid rgb(222, 219, 235);
+	box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.05);
+	background: $white;
+	padding-top: 50px;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	@include transition(0.3s);
+	& .pricing-shape{
+		position: absolute;
+		left: 50%;
+		top: -75px;
+		transform: translateX(-50%);
+		height: 180px;
+		width: 180px;
+		@include transition(0.3s);
+		& img{
+			width: 100%;
+		}
+	}
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url(../images/pricing-bg.png);
+		background-size: 100% 100%;
+		z-index: -1;
+		opacity: 0;
+		@include transition(0.3s);
+	}
+	& .title{
+		font-size: 46px;
+		font-weight: 400;
+		padding-top: 15px;
+		@include transition(0.3s);
+	}
+	& span{
+		display: block;
+		font-size: 18px;
+		font-weight: 500;
+		text-transform: capitalize;
+		padding-top: 6px;
+		border-bottom: 1px solid rgb(222, 219, 235);
+		padding-bottom: 41px;
+		margin-bottom: 38px;
+		@include transition(0.3s);
+	}
+	& ul{
+		padding-bottom: 45px;
+		& li{
+			font-size: 18px;
+			line-height: 40px;
+			@include transition(0.3s);
+			& i{
+				color: $theme-color;
+				padding-right: 6px;
+				font-size: 14px;
+			}
+		}
+	}
+	& p{
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $theme-color;
+		letter-spacing: 2px;
+		padding-top: 12px;
+		padding-bottom: 41px;
+		@include transition(0.3s);
+	}
+	&:hover,
+	&.center{
+		box-shadow: none;
+		& .pricing-shape{
+			opacity: .1;
+		}
+		&::before{
+			opacity: 1;
+		}
+		& .title{
+			color: $white;
+		}
+		& span{
+			color: #c2aad6;
+			border-bottom-color: #603e9e;
+		}
+		& ul{
+			& li{
+				color: #c2aad6;
+			}
+		}
+		& p{
+			color: #c2aad6;
+		}
+		
+	}
+}
+
+
+

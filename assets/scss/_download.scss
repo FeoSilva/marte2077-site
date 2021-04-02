@@ -1,0 +1,95 @@
+
+
+
+/*===========================
+    13.DOWNLOAD css 
+===========================*/
+
+
+
+
+.download-area{
+	background-size: 100% 100%;
+	@media #{$laptop} {
+		background-size: cover;
+	}
+	@media #{$lg} {
+		background-size: cover;
+	}
+	@media #{$md} {
+		background-size: cover;
+	}
+	@media #{$xs} {
+		background-size: cover;
+	}
+	& .brand-area{
+		margin-bottom: 107px;
+		border-bottom: 1px solid rgba(255,255,255,.2);
+		padding-bottom: 120px;
+	}
+	& .brand-item{
+		& img{
+			display: inline-block;
+			opacity: .3;
+			@include transition(0.3s);
+			&:hover{
+				opacity: .6;
+			}
+		}
+	}
+	& .download-items{
+		& .download-content{
+			& .title{
+				font-size: 50px;
+				color: $white;
+				font-weight: 400;
+				@media #{$md} {
+					font-size: 40px;
+				}
+				@media #{$xs} {
+					font-size: 30px;
+				}
+			}
+			& p{
+				color: $white;
+				font-size: 21px;
+				padding-top: 17px;
+				padding-bottom: 48px;
+				@media #{$md} {
+					font-size: 18px;
+				}
+				@media #{$xs} {
+					font-size: 16px;
+				}
+			}
+			& ul{
+				& li{
+					display: inline-block;
+					& a{
+						background: $white;
+						color: $heading-color;
+						border: 0;
+						margin: 0 3px;
+						@media #{$xs} {
+							padding: 0 20px;
+							margin-bottom: 10px;
+						}
+						&:hover{
+							background: $heading-color;
+							color: $white;
+						}
+						&.main-btn-2{
+							background: $heading-color;
+							color: $white;
+							&:hover{
+								color: $heading-color;
+								background: $white;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

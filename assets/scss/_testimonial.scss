@@ -1,0 +1,231 @@
+
+
+
+/*===========================
+    7.TESTIMONIAL css 
+===========================*/
+
+
+
+
+.testimonial-area{
+	margin-bottom: 110px;
+	padding-top: 164px;
+	padding-bottom: 252px;
+	background-size: 100% 100%;
+	position: relative;
+	overflow: hidden;
+	z-index: 10;
+	@media #{$laptop} {
+		background-size: cover;
+	}
+	@media #{$lg} {
+		background-size: cover;
+	}
+	@media #{$md} {
+		background-size: cover;
+	}
+	@media #{$xs} {
+		background-size: cover;
+	}
+	& .testimonial-users{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: -1;
+		@include animation(tesiMove linear infinite 5s);
+		@media #{$md} {
+			display: none;
+		}
+		@media #{$xs} {
+			display: none;
+		}
+		& .item{
+			& img{
+				border: 2px solid $white;
+				border-radius: 50%;
+				box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.15);
+
+
+			}
+			&.item-1{
+				position: absolute;
+				left: 405px;
+				top: 120px;
+				@media #{$laptop} {
+					top: 60px;
+				}
+				@media #{$lg} {
+					left: 200px;
+					top: 20px;
+				}
+			}
+			&.item-2{
+				position: absolute;
+				left: 100px;
+				top: 235px;
+				@media #{$lg} {
+					left: 50px;
+				}
+			}
+			&.item-3{
+				position: absolute;
+				left: 170px;
+				top: 400px;
+				@media #{$lg} {
+					left: 70px;
+				}
+			}
+			&.item-4{
+				position: absolute;
+				left: 430px;
+				top: 345px;
+				@media #{$lg} {
+					left: 230px;
+				}
+			}
+			&.item-5{
+				position: absolute;
+				right: 375px;
+				top: 170px;
+				@media #{$laptop} {
+					top: 70px;
+				}
+				@media #{$lg} {
+					right: 175px;
+					top: 50px;
+				}
+
+			}
+			&.item-6{
+				position: absolute;
+				right: 520px;
+				top: 415px;
+				@media #{$laptop} {
+					right: 450px;
+				}
+				@media #{$lg} {
+					right: 200px;
+				}
+			}
+			&.item-7{
+				position: absolute;
+				right: 250px;
+				top: 360px;
+				@media #{$lg} {
+					right: 50px;
+				}
+			}
+			&.item-8{
+				position: absolute;
+				right: 100px;
+				top: 235px;
+			}
+		}
+	}
+}
+
+
+
+.testimonial-slide{
+	& .testimonial-content {
+		& p{
+			font-size: 34px;
+			line-height: 50px;
+			color: $heading-color;
+			padding: 0 40px;
+			position: relative;
+			z-index: 5;
+			@media #{$xs} {
+				font-size: 22px;
+				line-height: 40px;
+				padding: 0 0;
+			}
+
+			@media #{$sm} {
+				padding: 0 40px;
+				font-size: 24px;
+			}
+			&::before{
+				position: absolute;
+				content: '"';
+				left: 50%;
+				transform: translateX(-50%) rotate(180deg);
+				top: -15px;
+				font-weight: 700;
+				font-size: 310px;
+				color: $theme-color;
+				z-index: -1;
+				opacity: .1;
+
+
+			}
+		}
+		& .title{
+			font-size: 22px;
+			font-weight: 600;
+			color: $theme-color;
+			padding-top: 50px;
+			& span{
+				font-weight: 500;
+				color: $text-color;
+				padding-top: 2px;
+			}
+		}
+	}
+	& .slick-dots{
+		position: absolute;
+		left: 50%;
+		bottom: -69px;
+		transform: translateX(-50%);
+		& li{
+			display: inline-block;
+			& button{
+				border: 0;
+				font-size: 0;
+				background: #d2d0dc;
+				height: 13px;
+				width: 13px;
+				border-radius: 50%;
+				margin: 0 3px;
+			}
+			&.slick-active{
+				& button{
+					height: 17px;
+					width: 17px;
+					background: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+@keyframes tesiMove {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	15% {
+		transform: rotate(2deg);
+	}
+
+	33% {
+		transform: rotate(4deg);
+	}
+
+	66% {
+		transform: rotate(2deg);
+	}
+
+	100% {
+		transform: rotate(0deg);
+	}
+}

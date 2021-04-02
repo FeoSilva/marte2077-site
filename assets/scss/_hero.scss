@@ -1,0 +1,157 @@
+
+
+
+/*===========================
+    3.HERO css 
+===========================*/
+
+
+
+.hero-area{
+	height: 1030px;
+	background-size: 100% 100%;
+	position: relative;
+	z-index: 10;
+	@media #{$laptop} {
+		background-size: cover;
+	}
+	@media #{$md} {
+		height: auto;
+		padding-top: 250px;
+		background-size: cover;
+		padding-bottom: 100px;
+	}
+	@media #{$xs} {
+		height: auto;
+		padding-top: 200px;
+		background-size: cover;
+		padding-bottom: 100px;
+	}
+	& .hero-line{
+		position: absolute;
+		left: 140px;
+		top: 150px;
+		-webkit-z-index: -1;
+		-moz-z-index: -1;
+		-ms-z-index: -1;
+		-o-z-index: -1;
+		z-index: -1;
+		@include animation(bubbleMover linear infinite 12s);
+	}
+}
+
+.hero-content{
+	& .title{
+		color: $white;
+		line-height: 86px;
+		font-size: 90px;
+		font-weight: 400;
+		letter-spacing: -2px;
+		@media #{$lg} {
+			font-size: 70px;
+			line-height: 80px;
+		}
+		@media #{$xs} {
+			font-size: 56px;
+			line-height: 66px;
+		}
+	}
+	& p{
+		font-size: 18px;
+		font-weight: 500;
+		line-height: 36px;
+		color: $white;
+		opacity: .6;
+		padding-top: 40px;
+		padding-bottom: 32px;
+	}
+}
+
+
+
+.hero-thumb{
+	margin-right: -44px;
+	animation: ImgBounce 2s ease-in-out infinite alternate;
+	@media #{$laptop} {
+		margin-right: 0;
+	}
+	@media #{$lg} {
+		margin-right: 0;
+	}
+	@media #{$md} {
+		margin-right: 0;
+		margin-top: 40px;
+	}
+	@media #{$xs} {
+		margin-right: 0;
+		margin-top: 40px;
+	}
+
+}
+
+
+@-webkit-keyframes ImgBounce {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+}
+
+@keyframes ImgBounce {
+	0% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	100% {
+		-webkit-transform: translateY(-30px);
+		transform: translateY(-30px);
+	}
+}
+
+
+
+
+
+
+
+
+
+.page-title-area{
+	background-size: 100% 100%;
+	padding-top: 233px;
+	padding-bottom: 200px;
+	& .page-title-item{
+		& nav{
+			display: inline-block;
+			& ol{
+				background-color: transparent;
+				margin: 0;
+				padding: 0;
+				& li{
+					font-size: 16px;
+					color: $white;
+					& a{
+						color: $white;
+					}
+				}
+			}
+		}
+		& .title{
+			font-weight: 400;
+			font-size: 50px;
+			color: $white;
+			padding-top: 10px;
+		}
+	}
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+	color: $white;
+	content: "-";
+}

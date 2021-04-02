@@ -1,0 +1,79 @@
+
+
+
+/*===========================
+    10.SCREENSHOTS css 
+===========================*/
+
+
+
+.screenshots-area{
+	padding-top: 114px;
+	padding-bottom: 190px;
+	background-size: 100% 100%;
+	margin-bottom: 100px;
+	& .section-title{
+		padding-bottom: 120px;
+	}
+	& .container-fluid{
+		max-width: 1595px;
+		@media #{$laptop} {
+			max-width: 1200px;
+		}
+		@media #{$lg} {
+			max-width: 992px;
+		}
+	}
+	& .screenshot-item{
+		& img{
+			width: 100%;
+		}
+	}
+	& .screenshot-active{
+		position: relative;
+		@media #{$laptop} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		@media #{$lg} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		@media #{$md} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		@media #{$xs} {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		&::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			background-image: url(../images/screenshot-thumb.png);
+			background-position: center center;
+			background-repeat: no-repeat;
+			width: 342px;
+			height: 665px;
+			background-size: 100% auto;
+			box-shadow: 0px 0px 60px 0px rgba(5, 5, 6, 0.05);
+			-webkit-transform: translate(-50%, -49%) scaleY(0.95);
+			transform: translate(-50%, -49%) scaleY(0.95);
+			@media #{$laptop} {
+				width: 260px;
+				height: 505px;
+			}
+			@media #{$md} {
+				display: none;
+			}
+			@media #{$xs} {
+				display: none;
+			}
+
+		}
+	}
+}

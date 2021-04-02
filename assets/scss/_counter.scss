@@ -1,0 +1,28 @@
+
+
+
+/*===========================
+    6.COUNTER css 
+===========================*/
+
+
+
+.counter-area{
+	background-size: 100% 100%;
+	padding: 76px 0 113px;
+}
+
+
+.counter-item{
+	& .title{
+		font-size: 60px;
+		font-weight: 500;
+		color: $white;
+	}
+	& span{
+		font-size: 18px;
+		font-weight: 500;
+		color: $white;
+		padding-top: 3px;
+	}
+}

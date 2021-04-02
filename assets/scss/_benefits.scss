@@ -1,0 +1,93 @@
+
+
+
+/*===========================
+    4.BENIFITS css 
+===========================*/
+
+
+
+
+
+.benefits-area{
+	padding-top: 86px;
+	position: relative;
+	z-index: 11;
+	& .benefits-line{
+		position: absolute;
+		left: 180px;
+		top: 45px;
+		z-index: -1;
+		@media #{$laptop} {
+			left: 0;
+		}
+	}
+}
+
+.benefits-thumb{
+	margin-left: -85px;
+	@media #{$xs} {
+		margin-left: 0;
+	}
+}
+
+.benefits-content{
+	padding-top: 47px;
+	& span{
+		font-size: 20px;
+		color: $theme-color;
+		text-transform: capitalize;
+	}
+	& .title{
+		font-size: 60px;
+		font-weight: 400;
+		padding-top: 5px;
+		padding-bottom: 15px;
+		@media #{$xs} {
+			font-size: 42px;
+		}
+	}
+	& p{
+		font-size: 18px;
+		line-height: 34px;
+		padding-top: 48px;
+		padding-bottom: 51px;
+	}
+	& .benefits-service{
+		& .item{
+			padding-left: 100px;
+			position: relative;
+			margin-top: 30px;
+			&.ml-45{
+				@media #{$xs} {
+					margin-left: 0;
+					margin-top: 40px;
+				}
+				@media #{$sm} {
+					margin-left: 45px;
+					margin-top: 30px;
+				}
+			}
+			& .icon{
+				height: 80px;
+				width: 80px;
+				text-align: center;
+				line-height: 80px;
+				background: $theme-color;
+				border-radius: 50%;
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateY(-50%);
+
+			}
+			& span{
+				color: $heading-color;
+				font-size: 20px;
+				line-height: 30px;
+			}
+		}
+	}
+}
+
+

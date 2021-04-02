@@ -1,0 +1,92 @@
+
+
+
+/*===========================
+    3.FEATURE css 
+===========================*/
+
+
+
+
+
+.feature-area{
+	padding-top: 38px;
+	position: relative;
+	z-index: 10;
+	overflow: hidden;
+	& .features-dot{
+		position: absolute;
+		right: 0;
+		top: 20px;
+		z-index: -1;
+		@include animation(bubbleMover2 linear infinite 12s);
+		@media #{$xs} {
+			display: none;
+		}
+	}
+}
+
+.feature-item{
+	background: #f4f3f9;
+	text-align: center;
+	position: relative;
+	z-index: 10;
+	&::before{
+		position: absolute;
+		content: '';
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-image: url(../images/features-item-bg.jpg);
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		background-position: center;
+		opacity: 0;
+		z-index: -1;
+		@include transition(0.4s);
+
+	}
+	& .icon{
+		height: 120px;
+		width: 120px;
+		display: inline-block;
+		background: $theme-color;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 120px;
+		margin-top: -62px;
+	}
+	& .title{
+		font-size: 20px;
+		font-weight: 500;
+		margin-top: 23px;
+		@include transition(0.4s);
+	}
+	& p{
+		font-size: 18px;
+		line-height: 34px;
+		padding: 37px 55px 31px;
+		@include transition(0.4s);
+		@media #{$lg} {
+			padding: 37px 30px 31px;
+		}
+		@media #{$xs} {
+			padding: 37px 20px 31px;
+		}
+	}
+	&:hover,
+	&.center{
+		box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
+		&::before{
+			opacity: 1;
+		}
+		& .title{
+			color: $white;
+		}
+		& p{
+			color: #c2aad6;
+		}
+	}
+}
+
