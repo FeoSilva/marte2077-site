@@ -1,7 +1,7 @@
-# Marte 2077
+# Marte 2077 - Site
 
-Esse repositório todos os arquivos da landing page do jogo Marte2077.
+Esse repositório contém todos os arquivos da landing page do jogo Marte2077.
 
-Esse projeto foi desenvolvido durante 4 dias no Brasa Hacks para a trilha da Wildlife
+O jogo foi desenvolvido durante 4 dias (01/04/2021 - 04/04/2021) para o evento Brasa Hacks na trilha da Wildlife Studios
 
 Site: https://marte2077.xyz
