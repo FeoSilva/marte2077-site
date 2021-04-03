@@ -3191,7 +3191,7 @@ p {
   color: #fff;
   font-size: 21px;
   padding-top: 17px;
-  padding-bottom: 48px;
+  padding-bottom: 24px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .download-area .download-items .download-content p {
